@@ -1,0 +1,10 @@
+atom/blob-store/*
+atom/packages/*
+atom/recovery/*
+atom/compile-cache/*
+atom/.node-gyp/*
+atom/.apm/*
+secure.dmg
+vim/.netrwhist
+vim/doc/tags-ja
+vim/plugged

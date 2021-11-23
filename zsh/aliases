@@ -1,0 +1,25 @@
+alias ks="kubespace"
+alias k="kubectl"
+alias h="heroku"
+alias less="less -R"
+alias ls="ls -la"
+alias reload_aliases="source ~/.zsh/aliases"
+alias v='nvim'
+alias g="git"
+alias be="bundle exec"
+alias undle="bundle"
+alias befs="forego start bundle exec"
+alias befr="forego run bundle exec"
+
+# Git aliases
+alias gcom='git checkout master'
+alias gplom='git pull origin master'
+
+#Tmux
+alias tnew='tmux new-session -s '
+alias tuse='tmux attach-session -t '
+alias cd..="cd .."
+
+alias ibrew='arch -x86_64 /usr/local/bin/brew'
+
+alias pair="upterm host --server ssh://upterm.herokai.com:22 --force-command 'tmux attach -t pair-programming' -- tmux new -t pair-programming"

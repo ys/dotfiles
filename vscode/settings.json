@@ -1,0 +1,293 @@
+{
+  "editor.fontFamily": "SF Mono",
+  "editor.lineNumbers": "relative",
+  "files.trimTrailingWhitespace": true,
+  "editor.cursorStyle": "line",
+  "editor.cursorBlinking": "solid",
+  "editor.tabSize": 2,
+  "editor.roundedSelection": false,
+  "editor.rulers": [
+    80
+  ],
+  "explorer.openEditors.visible": 0,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.tabCompletion": "on",
+  "editor.renderLineHighlight": "all",
+  "vim.useSystemClipboard": true,
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.duration": 100,
+  "vim.highlightedyank.color": "#004FAA",
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "k"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [
+        "g",
+        "p"
+      ],
+      "commands": [
+        "editor.action.peekDefinition"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "b"
+      ],
+      "commands": [
+        "workbench.action.navigateBack"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "r"
+      ],
+      "commands": [
+        "editor.action.referenceSearch.trigger"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "t"
+      ],
+      "commands": [
+        "go.toggle.test.file"
+      ]
+    },
+    {
+      "before": [
+        "t",
+        "f"
+      ],
+      "commands": [
+        "go.test.cursor"
+      ]
+    },
+    {
+      "before": [
+        "t",
+        "t"
+      ],
+      "commands": [
+        "go.test.file"
+      ]
+    },
+    {
+      "before": [
+        "t",
+        "p"
+      ],
+      "commands": [
+        "go.test.package"
+      ]
+    }
+  ],
+  "vim.visualModeKeyBindings": [],
+  "vim.statusBarColorControl": false,
+  "vim.statusBarColors.normal": [
+    "#69ee66",
+    "#434C5E"
+  ],
+  "vim.statusBarColors.insert": [
+    "#0cc1f3",
+    "#FFFFFF"
+  ],
+  "vim.statusBarColors.visual": [
+    "#ffce62",
+    "#aa770a"
+  ],
+  "vim.statusBarColors.visualline": "#B48EAD",
+  "vim.statusBarColors.visualblock": "#A3BE8C",
+  "vim.statusBarColors.replace": "#D08770",
+  "explorer.confirmDelete": false,
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true
+  },
+  "[graphql]": {
+    "editor.formatOnSave": true
+  },
+  "[ruby]": {
+    "editor.formatOnSave": true
+  },
+  "workbench.startupEditor": "none",
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.colorCustomizations": {
+    "[Cobalt2]": {
+      "editorCursor.foreground": "#ffc50099",
+      "editorCursor.background": "#deefff",
+      "tab.activeBorder": "#14354b",
+      "tab.activeBackground": "#14354b",
+      "editorGroupHeader.tabsBackground": "#152d3e",
+      "tab.inactiveBackground": "#152733",
+      "sideBar.background": "#152d3e",
+      "sideBar.foreground": "#99abb8",
+      "sideBar.border": "#13232e",
+      "editor.lineHighlightBorder": "#1F4662",
+      "editorLineNumber.activeForeground": "#456eab",
+      "editorGutter.background": "#14354b",
+      "editorGutter.deletedBackground": "#86535b",
+      "editorGutter.addedBackground": "#6fae5a",
+      "editorGutter.modifiedBackground": "#97885a",
+      "gitDecoration.modifiedResourceForeground": "#e2c18d",
+      "gitDecoration.deletedResourceForeground": "#747476",
+      "gitDecoration.untrackedResourceForeground": "#6fc38d",
+      "gitDecoration.ignoredResourceForeground": "#747476",
+      "gitDecoration.conflictingResourceForeground": "#FF7200",
+      "scrollbarSlider.background": "#355166cc",
+      "scrollbarSlider.activeBackground": "#355166cc",
+      "statusBar.border": "#13232e",
+      "pickerGroup.foreground": "#99abb8",
+      "input.border": "#0f202c",
+      "input.background": "#102432",
+      "list.focusBackground": "#234b66"
+    },
+    "terminal.background": "#002833",
+    "terminal.foreground": "#abb2bf",
+    "terminal.ansiBlack": "#272c33",
+    "terminal.ansiBrightBlack": "#31353f",
+    "terminal.ansiRed": "#e06b74",
+    "terminal.ansiBrightRed": "#f97782",
+    "terminal.ansiGreen": "#98c378",
+    "terminal.ansiBrightGreen": "#aadb87",
+    "terminal.ansiYellow": "#e5c07a",
+    "terminal.ansiBrightYellow": "#ffd589",
+    "terminal.ansiBlue": "#60aeee",
+    "terminal.ansiBrightBlue": "#68bbfe",
+    "terminal.ansiMagenta": "#c677dc",
+    "terminal.ansiBrightMagenta": "#dc85f7",
+    "terminal.ansiCyan": "#56b6c1",
+    "terminal.ansiBrightCyan": "#60ccdb",
+    "terminal.ansiWhite": "#abb1bf",
+    "terminal.ansiBrightWhite": "#b1b9cb"
+  },
+  "terminal.integrated.fontSize": 15,
+  "terminal.integrated.cursorStyle": "line",
+  "atomKeymap.promptV3Features": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.formatOnPaste": true,
+  "explorer.confirmDragAndDrop": false,
+  "telemetry.enableTelemetry": false,
+  "telemetry.enableCrashReporter": false,
+  "workbench.activityBar.visible": true,
+  "workbench.tips.enabled": false,
+  "workbench.tree.indent": 15,
+  "workbench.tree.renderIndentGuides": "none",
+  "workbench.editor.tabSizing": "fit",
+  "editor.fontSize": 16,
+  "explorer.decorations.badges": false,
+  "search.smartCase": true,
+  "editor.minimap.enabled": false,
+  "files.insertFinalNewline": true,
+  "workbench.enableExperiments": false,
+  "breadcrumbs.enabled": false,
+  "window.restoreWindows": "all",
+  "go.useLanguageServer": true,
+  "editor.formatOnSave": true,
+  "[go]": {
+    "editor.codeActionsOnSaveTimeout": 3000,
+    "editor.snippetSuggestions": "none",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "files.eol": "\n",
+  "go.testFlags": [
+    "-v",
+    "-count",
+    "1"
+  ],
+  "go.testEnvFile": "${workspaceFolder}/environment/experimental",
+  "go.formatTool": "goformat",
+  "editor.matchBrackets": false,
+  "workbench.iconTheme": "file-icons",
+  "explorer.autoReveal": false,
+  "problems.autoReveal": false,
+  "eslint.autoFixOnSave": true,
+  "window.zoomLevel": 0,
+  "editor.fontLigatures": true,
+  "debug.console.fontSize": 15,
+  "editor.mouseWheelZoom": true,
+  "extensions.ignoreRecommendations": true,
+  "update.mode": "manual",
+  "vscode_custom_css.imports": [
+    "file:///Users/yschutz/src/ys/dotfiles/vscode/styles.css",
+    "file:///Users/yschutz/src/ys/dotfiles/vscode/scripts.js"
+  ],
+  "vscode_custom_css.policy": true,
+  "peacock.favoriteColors": [
+    {
+      "name": "Angular Red",
+      "value": "#b52e31"
+    },
+    {
+      "name": "Auth0 Orange",
+      "value": "#eb5424"
+    },
+    {
+      "name": "Azure Blue",
+      "value": "#007fff"
+    },
+    {
+      "name": "C# Purple",
+      "value": "#68217A"
+    },
+    {
+      "name": "Gatsby Purple",
+      "value": "#639"
+    },
+    {
+      "name": "Go Cyan",
+      "value": "#5dc9e2"
+    },
+    {
+      "name": "Java Blue-Gray",
+      "value": "#557c9b"
+    },
+    {
+      "name": "JavaScript Yellow",
+      "value": "#f9e64f"
+    },
+    {
+      "name": "Mandalorian Blue",
+      "value": "#1857a4"
+    },
+    {
+      "name": "Node Green",
+      "value": "#215732"
+    },
+    {
+      "name": "React Blue",
+      "value": "#00b3e6"
+    },
+    {
+      "name": "Something Different",
+      "value": "#832561"
+    },
+    {
+      "name": "Vue Green",
+      "value": "#42b883"
+    }
+  ],
+  "ruby.format": "rubyfmt",
+  "ruby.codeCompletion": "rcodetools",
+  "editor.fontWeight": "200",
+  "workbench.colorTheme": "Nord",
+  "git.confirmSync": false
+}

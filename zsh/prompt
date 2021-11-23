@@ -1,0 +1,44 @@
+eval "$(starship init zsh)"
+# Git prompt
+#
+autoload -Uz vcs_info
+
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:*' get-revision true
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:git*' formats '[%b]'
+zstyle ':vcs_info:*' actionformats ' %u%c'
+precmd() {
+  vcs_info
+}
+setopt prompt_subst
+
+# prompt
+if [[ $UID -eq 0 ]]; then
+  local user_host='%n@%m'
+  local user_symbol='🏴‍☠️'
+else
+  local user_host=$(print -P '%n@%m')
+  if [ "$user_host" = "yschutz@yschutz-ltmhciy" ]; then
+    local user_host="☁️  "
+  fi
+  local user_symbol='⚡️'
+fi
+
+local current_dir="%~"
+
+# k8s
+local kube_status=''
+local kube_ps1_src='/usr/local/opt/kube-ps1/share/kube-ps1.sh'
+if [ -f $kube_ps1_src ]; then
+  KUBE_PS1_PREFIX=" ["
+  KUBE_PS1_SUFFIX="]"
+  KUBE_PS1_SYMBOL_DEFAULT="k8s"
+  KUBE_PS1_SEPARATOR=":"
+  KUBE_PS1_DIVIDER="|"
+  source $kube_ps1_src
+fi
+
+
+# PROMPT='${user_host} %F{cyan}${current_dir}%f %F{green}${vcs_info_msg_0_}%f$(kube_ps1)
+# %B${user_symbol}%b '

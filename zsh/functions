@@ -1,0 +1,30 @@
+function ka() {
+  source <(command kubectl completion zsh)
+  complete -F __start_kubectl k
+}
+
+function hexrandom {
+  size=${1-64}
+  ruby -e "require 'securerandom'; puts SecureRandom.hex($size)"
+}
+
+function uuid {
+  ruby -e "require 'securerandom'; puts SecureRandom.uuid"
+}
+
+function 64 {
+  echo $1 | base64 -
+}
+
+bag() {
+  ag "$@" `bundle show --paths`
+}
+
+livejq() {
+fzf \
+  --phony \
+  --preview-window='up:90%' \
+  --print-query \
+  --preview \
+  "cat $@| jq --color-output {q}"
+}

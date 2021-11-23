@@ -1,0 +1,8 @@
+export GOPRIVATE="github.com/heroku/*,git.soma.salesforce.com/*"
+# heroku autocomplete setup
+CLI_ENGINE_AC_ZSH_SETUP_PATH=/Users/yschutz/Library/Caches/heroku/completions/zsh_setup && test -f $CLI_ENGINE_AC_ZSH_SETUP_PATH && source $CLI_ENGINE_AC_ZSH_SETUP_PATH;
+
+cloud() {
+  eval "$(ion-client shell)"
+  cloud "$@"
+}

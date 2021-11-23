@@ -1,0 +1,8 @@
+fpath=(/usr/local/share/zsh/site-functions /usr/local/share/zsh-completions $fpath)
+autoload -Uz compinit promptinit colors
+compinit -i
+promptinit
+colors
+
+# case insensitive completion
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'

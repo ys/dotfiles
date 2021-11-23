@@ -1,0 +1,78 @@
+[user]
+	name = Yannick Schutz
+  ; email = yannick.schutz@gmail.com
+  email = yschutz@salesforce.com
+  ;email = hello@yannickschutz.com
+[color]
+  diff = true
+  status = true
+  branch = true
+  interactive = true
+  ui = true
+  pager = true
+[color "diff"]
+  meta = yellow
+[core]
+  excludesfile = ~/.gitignore_global
+  editor = "vim"
+  whitespace = trailing-space,space-before-tab
+[apply]
+whitespace = fix
+
+[alias]
+  ci = commit
+  st = status
+  co = checkout
+  cob = checkout -b
+  d = diff
+  ps = push
+  pl = pull
+  m = merge
+  ms = merge --squash
+  b = branch
+  rb = rebase
+  l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  db = branch -d
+  ctags = !.git/hooks/ctags
+  delete-remote = "!sh -c 'git push origin :$0'"
+  p = "!sh -c 'git push ${@/--yolo/-f}'"
+  dc = diff --cached
+  ro = !git fetch origin --prune && git reset --hard origin/master
+  cp = cherry-pick
+  lp = log -p
+[help]
+  autocorrect = 1
+[branch]
+  autosetupmerge = true
+  autosetuprebase = always
+[push]
+	default = current
+[pull]
+  rebase = true
+[rerere]
+  enabled = 1
+[mergetool]
+  keepBackup = true
+	prompt = false
+[init]
+  templatedir = ~/.git_template
+[hub]
+  protocol = https
+[github]
+  user = ys
+[difftool]
+	prompt = false
+[credential]
+	helper = osxkeychain
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
+	process = git-lfs filter-process
+[commit]
+	gpgSign = true
+[gpg]
+;	program = /usr/local/bin/krgpg
+ program = gpg
+[tag]
+	forceSignAnnotated = true
