@@ -62,8 +62,6 @@ whitespace = fix
   user = ys
 [difftool]
 	prompt = false
-[credential]
-	helper = osxkeychain
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -76,3 +74,5 @@ whitespace = fix
  program = gpg
 [tag]
 	forceSignAnnotated = true
+[credential]
+	helper = !gh auth git-credential

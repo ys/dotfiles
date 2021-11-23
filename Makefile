@@ -14,6 +14,9 @@ sync:
 	[ -f ~/.vimrc ] || ln -s $(PWD)/vimrc ~/.vimrc
 	[ -f ~/.zsh ] || ln -s $(PWD)/zsh ~/.zsh
 	[ -f ~/.zshrc ] || ln -s $(PWD)/zshrc ~/.zshrc
+	mkdir -p ~/.config
+	[! -d ~/.config/nvim ] || ln -s $(PWD)/config/nvim ~/.config/nvim
+	[ -f ~/.config/starship.toml ] || ln -s $(PWD)/config/starship.toml ~/.config/starship.toml
 	mkdir -p ~/.gnupg
 	chmod 755 ~/.gnupg
 	[ -f ~/.gnupg/gpg.conf ] || ln -s $(PWD)/gnupg/gpg.conf ~/.gnupg/gpg.conf

@@ -1,0 +1,13 @@
+[env_var.HEROKU_CLOUD]
+default = 'production'
+symbol = '🌧'
+format = ' $symbol  [$env_value](fg:purple) '
+
+[kubernetes]
+disabled = true
+
+[aws]
+disabled = true
+
+[golang]
+disabled = true
