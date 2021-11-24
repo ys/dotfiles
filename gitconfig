@@ -1,8 +1,8 @@
 [user]
 	name = Yannick Schutz
   ; email = yannick.schutz@gmail.com
-  email = yschutz@salesforce.com
-  ;email = hello@yannickschutz.com
+  ;email = yschutz@salesforce.com
+  email = hello@yannickschutz.com
 [color]
   diff = true
   status = true
@@ -68,9 +68,9 @@ whitespace = fix
 	required = true
 	process = git-lfs filter-process
 [commit]
-	gpgSign = true
+	; gpgSign = true
 [gpg]
-;	program = /usr/local/bin/krgpg
+ program = /usr/local/bin/krgpg
  program = gpg
 [tag]
 	forceSignAnnotated = true

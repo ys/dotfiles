@@ -5,7 +5,6 @@ IFS=$' '
 echo $(PWD)
 [ -f ~/.ackrc ] || ln -s $(PWD)/ackrc ~/.ackrc
 [ -f ~/.agignore ] || ln -s $(PWD)/agignore ~/.agignore
-[ -f ~/.gemrc ] || ln -s $(PWD)/gemrc ~/.gemrc
 [ -d ~/.git_template ] || ln -s $(PWD)/git_template ~/.git_template
 [ -f ~/.gitconfig ] || ln -s $(PWD)/gitconfig ~/.gitconfig
 [ -f ~/.gitignore_global ] || ln -s $(PWD)/gitignore_global ~/.gitignore_global

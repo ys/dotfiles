@@ -48,7 +48,7 @@ augroup myfiletypes
 augroup END
 
 " Aliases
-map <leader>f :FZF<CR>
+"map <leader>f :FZF<CR>
 let g:rspec_command = "Dispatch bundle exec rspec {spec}"
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>r :call Rubocop()<CR>
