@@ -9,6 +9,12 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 " end: for telesocpe
+" start: iawriter
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+Plug 'reedes/vim-colors-pencil'
+Plug 'subnut/vim-iawriter'
+" end: iawriter
 " start: for old vim
 Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-dispatch'
