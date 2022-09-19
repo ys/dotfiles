@@ -14,7 +14,7 @@
   meta = yellow
 [core]
   excludesfile = ~/.gitignore_global
-  editor = "vim"
+  editor = "nvim"
   whitespace = trailing-space,space-before-tab
 [apply]
 whitespace = fix
@@ -37,7 +37,7 @@ whitespace = fix
   delete-remote = "!sh -c 'git push origin :$0'"
   p = "!sh -c 'git push ${@/--yolo/-f}'"
   dc = diff --cached
-  ro = !git fetch origin --prune && git reset --hard origin/master
+  ro = !git fetch origin --prune && git reset --hard origin/main
   cp = cherry-pick
   lp = log -p
 [help]
@@ -56,6 +56,7 @@ whitespace = fix
 	prompt = false
 [init]
   templatedir = ~/.git_template
+	defaultBranch = main
 [hub]
   protocol = https
 [github]

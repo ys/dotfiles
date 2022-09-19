@@ -13,7 +13,7 @@ alias befr="forego run bundle exec"
 
 # Git aliases
 alias gcom='git checkout master'
-alias gplom='git pull origin master'
+alias gplom='git pull origin main'
 
 #Tmux
 alias tnew='tmux new-session -s '
@@ -23,3 +23,7 @@ alias cd..="cd .."
 alias ibrew='arch -x86_64 /usr/local/bin/brew'
 
 alias pair="upterm host --server ssh://upterm.herokai.com:22 --force-command 'tmux attach -t pair-programming' -- tmux new -t pair-programming"
+
+# Kubernetes
+
+alias kill-dogwood-ci="kubectl get pods -n runners --no-headers=true | awk ‘/dogwood/{print $1}’ | xargs  kubectl delete -n runners pods"
