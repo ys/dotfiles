@@ -8,13 +8,12 @@ tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 brew "adr-tools"
+brew "asdf"
 brew "gdbm"
 brew "openssl@1.1"
 brew "readline"
 brew "autojump"
 brew "automake"
-brew "bison"
-brew "chruby"
 brew "curl"
 brew "forego"
 brew "fzf"
@@ -23,8 +22,6 @@ brew "git"
 brew "git-secrets"
 brew "libffi"
 brew "gnupg"
-brew "go"
-brew "go@1.15"
 brew "helm"
 brew "hopenpgp-tools"
 brew "hub"
@@ -39,19 +36,13 @@ brew "libssh"
 brew "libxml2"
 brew "libyaml"
 brew "mas"
-brew "minikube"
 brew "neovim", args: ["HEAD"]
 brew "pinentry-mac"
-brew "pipenv"
 brew "postgresql", restart_service: true
 brew "protobuf"
-brew "python@3.8"
 brew "redis", restart_service: true
 brew "rsync"
-brew "ruby"
-brew "ruby-install"
 brew "stern"
-brew "terraform"
 brew "the_silver_searcher"
 brew "tldr"
 brew "tmate"
@@ -70,12 +61,6 @@ cask "sbarex-qlmarkdown"
 cask "sfdx"
 cask "spotify"
 cask "visual-studio-code"
-mas "1Password 7", id: 1333542190
 mas "Better", id: 1121192229
-mas "GarageBand", id: 682658836
 mas "iA Writer", id: 775737590
-mas "iMovie", id: 408981434
-mas "Keynote", id: 409183694
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
 mas "Xcode", id: 497799835

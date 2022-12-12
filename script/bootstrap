@@ -17,6 +17,9 @@ echo $(pwd)
 mkdir -p ~/.config
 [ -d ~/.config/nvim ] || ln -s $(pwd)/config/nvim ~/.config/nvim
 [ -f ~/.config/starship.toml ] || ln -s $(pwd)/config/starship.toml ~/.config/starship.toml
+mkdir -p ~/.ssh
+chmod 755 ~/.ssh
+[ -f ~/.ssh/config ] || ln -s $(pwd)/ssh/config ~/.ssh/config
 mkdir -p ~/.gnupg
 chmod 755 ~/.gnupg
 [ -f ~/.gnupg/gpg.conf ] || ln -s $(pwd)/gnupg/gpg.conf ~/.gnupg/gpg.conf
