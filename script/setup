@@ -1,0 +1,12 @@
+asdf plugin add nodejs
+asdf plugin add golang
+asdf plugin add terraform
+asdf plugin add ruby
+asdf plugin add python
+
+asdf install nodejs latest
+asdf install golang latest
+asdf install golang 1.15
+asdf install terraform latest
+asdf install ruby latest
+asdf install python latest
