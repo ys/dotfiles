@@ -2,8 +2,8 @@
 	name = Yannick Schutz
   ; email = yannick.schutz@gmail.com
   ;email = yschutz@salesforce.com
-  email = hello@yannickschutz.com
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFlyk+an5s//2pt/2fWpIxBC1+9KK49mGaQnUDXI5fTC
+  email = yschutz@salesforce.com
+  ;email = hello@yannickschutz.com
 [color]
   diff = true
   status = true
