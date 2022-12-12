@@ -1,4 +1,5 @@
 log/**.log
 tmp/**
 coverage/**
+node_modules/**
 vendor/**

@@ -16,9 +16,15 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 # Source all the .zsh files
 for file in $HOME/.zsh/*; do source $file; done
 
-. /usr/local/opt/asdf/libexec/asdf.sh
+[ -f /usr/local/opt/asdf/libexec/asdf.sh ] && . /usr/local/opt/asdf/libexec/asdf.sh
+[ -f /opt/homebrew/opt/asdf/libexec/asdf.sh ] && . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
-eval "$(jump shell)"
+export SSH_AUTH_SOCK=/Users/ys/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
+
+
+[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
+
+
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
@@ -35,3 +41,6 @@ glow ~/TODO.md
 echo ""
 echo "Just do it"
 echo ""
+
+# Scaleway CLI autocomplete initialization.
+eval "$(scw autocomplete script shell=zsh)"

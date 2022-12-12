@@ -4,6 +4,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend upda
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
 
+Plug 'tpope/vim-commentary'
 " start: for telesocpe
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
@@ -15,6 +16,7 @@ Plug 'junegunn/limelight.vim'
 Plug 'reedes/vim-colors-pencil'
 Plug 'subnut/vim-iawriter'
 " end: iawriter
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " start: for old vim
 Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-dispatch'

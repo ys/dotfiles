@@ -3,6 +3,7 @@
   ; email = yannick.schutz@gmail.com
   ;email = yschutz@salesforce.com
   email = hello@yannickschutz.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFlyk+an5s//2pt/2fWpIxBC1+9KK49mGaQnUDXI5fTC
 [color]
   diff = true
   status = true
@@ -16,6 +17,7 @@
   excludesfile = ~/.gitignore_global
   editor = "nvim"
   whitespace = trailing-space,space-before-tab
+	attributesfile = ~/.gitattributes
 [apply]
 whitespace = fix
 
@@ -40,6 +42,7 @@ whitespace = fix
   ro = !git fetch origin --prune && git reset --hard origin/main
   cp = cherry-pick
   lp = log -p
+	diff-image = "!f() { cd -- \"${GIT_PREFIX:-.}\"; GIT_DIFF_IMAGE_ENABLED=1 git diff \"$@\"; }; f"
 [help]
   autocorrect = 1
 [branch]
@@ -63,17 +66,25 @@ whitespace = fix
   user = ys
 [difftool]
 	prompt = false
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	required = true
-	process = git-lfs filter-process
 [commit]
+	gpgsign = true
 	; gpgSign = true
 [gpg]
  program = /usr/local/bin/krgpg
  program = gpg
+	format = ssh
 [tag]
 	forceSignAnnotated = true
 [credential]
 	helper = !gh auth git-credential
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[diff "image"]
+	command = ~/git-diff-image/git_diff_image
+[secrets]
+	providers = git secrets --aws-provider
+	patterns = (A3T[A-Z0-9]|AKIA|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16}
+	patterns = (\"|')?(AWS|aws|Aws)?_?(SECRET|secret|Secret)?_?(ACCESS|access|Access)?_?(KEY|key|Key)(\"|')?\\s*(:|=>|=)\\s*(\"|')?[A-Za-z0-9/\\+=]{40}(\"|')?
+	patterns = (\"|')?(AWS|aws|Aws)?_?(ACCOUNT|account|Account)_?(ID|id|Id)?(\"|')?\\s*(:|=>|=)\\s*(\"|')?[0-9]{4}\\-?[0-9]{4}\\-?[0-9]{4}(\"|')?
+	allowed = AKIAIOSFODNN7EXAMPLE
+	allowed = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
