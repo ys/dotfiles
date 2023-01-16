@@ -59,6 +59,11 @@ require('packer').startup(function(use)
 
   -- Fuzzy Finder Algorithm which requires local dependencies to be built. Only load if `make` is available
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable 'make' == 1 }
+  -- Theme
+  use {
+    'uloco/bluloco.nvim',
+    requires = { 'rktjmp/lush.nvim' }
+  }
 
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, 'custom.plugins')
@@ -70,6 +75,14 @@ require('packer').startup(function(use)
     require('packer').sync()
   end
 end)
+
+
+require("bluloco").setup({
+  style = "auto",               -- "auto" | "dark" | "light"
+  transparent = false,
+  italics = false,
+  terminal = vim.fn.has("gui_running") == 1 -- bluoco colors are enabled in gui terminals per default.
+})
 
 -- When we are bootstrapping a configuration, it doesn't
 -- make sense to execute the rest of the init.lua.
@@ -156,7 +169,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 require('lualine').setup {
   options = {
     icons_enabled = false,
-    theme = 'onedark',
+    theme = 'auto',
     component_separators = '|',
     section_separators = '',
   },
