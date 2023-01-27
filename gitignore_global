@@ -1,3 +1,4 @@
+.rgignore
 .vscode
 .byebug_history
 /tags

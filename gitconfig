@@ -2,8 +2,8 @@
   name = Yannick Schutz
   ; email = yannick.schutz@gmail.com
   ;email = yschutz@salesforce.com
-  ;email = yschutz@salesforce.com
-  email = hello@yannickschutz.com
+  email = yschutz@salesforce.com
+  ;email = hello@yannickschutz.com
 [color]
   diff = true
   status = true
@@ -65,9 +65,7 @@ whitespace = fix
 [github]
   user = ys
 [difftool]
-	prompt = false
-[commit]
-	;gpgsign = true
+  prompt = false
 [gpg]
  program = /usr/local/bin/krgpg
  program = gpg

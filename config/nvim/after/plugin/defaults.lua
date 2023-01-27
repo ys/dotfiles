@@ -23,44 +23,24 @@ require('lualine').setup {
   },
 }
 
-function Go_Imports(wait_ms)
-  local params = vim.lsp.util.make_range_params()
-  params.context = { only = { "source.organizeImports" } }
-  local result = vim.lsp.buf_request_sync(0, "textDocument/codeAction", params, wait_ms)
-  for _, res in pairs(result or {}) do
-    for _, r in pairs(res.result or {}) do
-      if r.edit then
-        vim.lsp.util.apply_workspace_edit(r.edit, "utf-16")
-      else
-        vim.lsp.buf.execute_command(r.command)
-      end
-    end
-  end
-
-  vim.lsp.buf.format()
-end
-
-function Format_Code()
-  local filetype = vim.api.nvim_buf_get_option(0, 'filetype')
-
-  if filetype == "go" then
-    Go_Imports(2000)
-  else
-    vim.lsp.buf.format()
-  end
-end
-
-local on_attach = function(_, _)
-vim.api.nvim_create_autocmd("BufWritePre", {
-	callback = function()
-          local filetype = vim.api.nvim_buf_get_option(0, 'filetype')
-
-          if filetype == "go" then
-            Go_Imports(2000)
-          end
-          vim.lsp.buf.format()
-        end,
-	group = vim.api.nvim_create_augroup("lsp_document_format", {clear = true}),
-	buffer = 0
+require("nvim-tree").setup({
+  renderer = {
+    indent_markers = {
+      enable = true,
+    },
+    icons = {
+      git_placement = "signcolumn",
+      show = {
+        file = false,
+        folder = false,
+        folder_arrow = false,
+        git = true,
+      },
+    },
+  },
 })
-end
+
+vim.keymap.set("n", "<leader>fe", "<cmd>NvimTreeToggle<CR>", opts)
+
+vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
+

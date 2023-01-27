@@ -19,10 +19,9 @@ for file in $HOME/.zsh/*; do source $file; done
 [ -f /usr/local/opt/asdf/libexec/asdf.sh ] && . /usr/local/opt/asdf/libexec/asdf.sh
 [ -f /opt/homebrew/opt/asdf/libexec/asdf.sh ] && . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
-export SSH_AUTH_SOCK=/Users/ys/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
-
 
 [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 
 
@@ -37,10 +36,3 @@ export DISABLE_SPRING=1
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-glow ~/TODO.md
-echo ""
-echo "Just do it"
-echo ""
-
-# Scaleway CLI autocomplete initialization.
-eval "$(scw autocomplete script shell=zsh)"
