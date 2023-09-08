@@ -27,3 +27,6 @@ alias pair="upterm host --server ssh://upterm.herokai.com:22 --force-command 'tm
 # Kubernetes
 
 alias kill-dogwood-ci="kubectl get pods -n runners --no-headers=true | awk ‘/dogwood/{print $1}’ | xargs  kubectl delete -n runners pods"
+
+
+alias loadenv="export $(cat ~/.env | xargs)"

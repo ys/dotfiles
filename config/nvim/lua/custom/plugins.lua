@@ -31,4 +31,5 @@ return function(use)
   }
 
   use {'edluffy/hologram.nvim' }
+  use 'hashivim/vim-terraform'
 end
