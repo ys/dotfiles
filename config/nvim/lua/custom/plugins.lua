@@ -12,4 +12,7 @@ return function(use)
       'nvim-tree/nvim-web-devicons', -- optional, for file icons
     },
   }
+
+  -- github copilot
+  use "github/copilot.vim"
 end

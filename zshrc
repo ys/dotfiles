@@ -9,7 +9,7 @@ export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 export GOPATH=~/go
 export GOBIN=~/go/bin
-export PATH=/opt/homebrew/bin:/usr/local/bin:$HOME/src/heroku-shell/bin:$GOBIN:$HOME/bin:$GOPATH/bin:$PATH
+export PATH=/opt/homebrew/bin:/usr/local/bin:$HOME/src/heroku-shell/bin:/Users/ys/.cargo/bin:$GOBIN:$HOME/bin:$GOPATH/bin:~/.local/bin:$PATH
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 
@@ -36,3 +36,5 @@ export DISABLE_SPRING=1
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# Scaleway CLI autocomplete initialization.
+eval "$(scw autocomplete script shell=zsh)"

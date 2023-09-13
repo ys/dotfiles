@@ -40,9 +40,10 @@ whitespace = fix
   p = "!sh -c 'git push ${@/--yolo/-f}'"
   dc = diff --cached
   ro = !git fetch origin --prune && git reset --hard origin/main
+  sync = !git pull origin && git push origin
   cp = cherry-pick
   lp = log -p
-	diff-image = "!f() { cd -- \"${GIT_PREFIX:-.}\"; GIT_DIFF_IMAGE_ENABLED=1 git diff \"$@\"; }; f"
+  diff-image = "!f() { cd -- \"${GIT_PREFIX:-.}\"; GIT_DIFF_IMAGE_ENABLED=1 git diff \"$@\"; }; f"
 [help]
   autocorrect = 1
 [branch]
