@@ -71,7 +71,6 @@ class Downloader
     end
   end
 
-
   def to_frontmatter(l)
     {
       "uuid" => l["_id"],
