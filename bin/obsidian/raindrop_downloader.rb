@@ -5,6 +5,7 @@ require "bundler/setup"
 require "json"
 require "yaml"
 require "active_support/all"
+require "fileutils"
 Bundler.require(:default)
 Dotenv.load
 
@@ -56,6 +57,17 @@ class Raindrop
 end
 
 class Downloader
+  def download_covers
+    path = "#{destination}/images"
+    FileUtils.rm_rf(Dir.glob("#{path}/*"))
+    Dir.chdir(path) do
+      raindrop.raindrops.each do |r|
+        `wget -O "#{r["_id"]}" "#{r["cover"]}"`
+      end
+      `mogrify -resize 1000x1000 -format webp *`
+    end
+  end
+
   def download_liked
     raindrop.liked.each do |l|
       data = {
@@ -98,6 +110,7 @@ class Downloader
     end
     root.each do |c|
       path = "#{destination}/#{c["title"]}"
+      FileUtils.rm_rf(Dir.glob("#{path}/*"))
       Dir.mkdir path unless File.exist?(path)
       c["raindrops"].each do |r|
         r = r.merge(raindrop.parse(r["link"]))
@@ -148,4 +161,6 @@ class Downloader
   end
 end
 
-Downloader.new.download_all
+# Downloader.new.download_all
+Downloader.new.download_covers
+
