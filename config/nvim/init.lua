@@ -252,7 +252,6 @@ vim.api.nvim_create_autocmd('BufWritePost', {
   group = packer_group,
   pattern = vim.fn.expand '$MYVIMRC',
 })
->>>>>>> 8d3e17e (LOL)
 
 -- [[ Setting options ]]
 -- See `:help vim.o`
