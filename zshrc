@@ -9,8 +9,13 @@ export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 export GOPATH=~/go
 export GOBIN=~/go/bin
-export PATH=/opt/homebrew/bin:/usr/local/bin:$HOME/src/heroku-shell/bin:/Users/ys/.cargo/bin:$GOBIN:$HOME/bin:$GOPATH/bin:~/.local/bin:$PATH
+export PATH=/usr/local/opt/postgresql@15/bin:/opt/homebrew/bin:/usr/local/bin:$HOME/.cargo/bin:$HOME/src/heroku-shell/bin:$GOBIN:$HOME/bin:$GOPATH/bin:$PATH
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+export LDFLAGS="-L/usr/local/opt/postgresql@15/lib"
+export CPPFLAGS="-I/usr/local/opt/postgresql@15/include"
+
+export PKG_CONFIG_PATH="/usr/local/opt/postgresql@15/lib/pkgconfig"
 
 
 # Source all the .zsh files
