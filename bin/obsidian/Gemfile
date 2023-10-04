@@ -1,9 +1,0 @@
-source "https://rubygems.org"
-ruby "3.2.2"
-
-gem "excon"
-gem "pp"
-gem "arena"
-gem "dotenv"
-
-gem "activesupport", "~> 7.0"
