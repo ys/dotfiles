@@ -141,23 +141,12 @@ require('lazy').setup({
       end,
     },
   },
-
-  {
-    'uloco/bluloco.nvim',
-    lazy = false,
+  { "catppuccin/nvim",
+    name = "catppuccin",
     priority = 1000,
-    dependencies = { 'rktjmp/lush.nvim' },
     config = function()
-      -- your optional config goes here, see below.
-    end,
-  },
-  {
-    -- Theme inspired by Atom
-    'navarasu/onedark.nvim',
-    priority = 100,
-    config = function()
-      vim.cmd.colorscheme 'onedark'
-    end,
+      vim.cmd.colorscheme "catppuccin"
+    end ,
   },
 
   {
@@ -167,7 +156,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'onedark',
+        theme = 'catppucin',
         component_separators = '|',
         section_separators = '',
       },
