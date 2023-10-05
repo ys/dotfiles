@@ -146,7 +146,7 @@ require('lazy').setup({
     priority = 1000,
     config = function()
       vim.cmd.colorscheme "catppuccin"
-    end ,
+    end,
   },
 
   {
@@ -156,7 +156,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'catppucin',
+        theme = 'catppuccin',
         component_separators = '|',
         section_separators = '',
       },
