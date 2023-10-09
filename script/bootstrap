@@ -16,6 +16,7 @@ echo $(pwd)
 [ -f ~/.zshrc ] || ln -s $(pwd)/zshrc ~/.zshrc
 mkdir -p ~/.config
 [ -d ~/.config/nvim ] || ln -s $(pwd)/config/nvim ~/.config/nvim
+[ -d ~/.config/zed ] || ln -s $(pwd)/config/zed ~/.config/zed
 [ -f ~/.config/starship.toml ] || ln -s $(pwd)/config/starship.toml ~/.config/starship.toml
 mkdir -p ~/.ssh
 chmod 755 ~/.ssh

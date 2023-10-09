@@ -30,3 +30,5 @@ alias kill-dogwood-ci="kubectl get pods -n runners --no-headers=true | awk ‘/d
 
 
 alias loadenv="export $(cat ~/.env | xargs)"
+
+alias code="zed"
